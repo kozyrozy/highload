@@ -7,5 +7,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx-configs/round-robin.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - counter
     ports:
-      - "8080"
+      - "4000:4000"
