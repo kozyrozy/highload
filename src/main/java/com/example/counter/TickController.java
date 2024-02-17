@@ -8,6 +8,6 @@ public class TickController {
 
 	private int counter = 0;
 
-	@GetMapping("/tick")
+	@GetMapping("/")
 	public Tick tick() { return new Tick(counter++); }
 }
