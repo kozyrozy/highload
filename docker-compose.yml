@@ -1,8 +1,8 @@
 services:
   counter:
-  #To start a multiple instances of this srevice, run command:
-  #'docker compose up --scale counter=N', N=number of instances
-  #and then 'docker compose ps' to list the port mappings
+    #To start a multiple instances of this service, run command:
+    #'docker compose up --scale counter=N', N=number of instances
+    #and then 'docker compose ps' to list the port mappings
     image: counter:latest
     build:
       context: .
@@ -15,3 +15,13 @@ services:
       - counter
     ports:
       - "4000:4000"
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    volumes:
+      - /path/to/local/data:/root/redis
+      - /path/to/local/redis.conf:/usr/local/etc/redis/redis.conf
+    environment:
+      - REDIS_PORT=6379
+      - REDIS_HOST=host.docker.internal #options: host.docker.internal, redis, localhost

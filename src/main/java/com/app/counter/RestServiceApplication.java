@@ -1,4 +1,4 @@
-package com.example.counter;
+package com.app.counter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
