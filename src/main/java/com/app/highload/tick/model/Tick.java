@@ -1,4 +1,4 @@
-package com.app.counter;
+package com.app.highload.tick.model;
 
 import org.springframework.data.redis.core.RedisHash;
 @RedisHash("tick")

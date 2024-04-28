@@ -1,4 +1,4 @@
-package com.app.counter;
+package com.app.highload;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

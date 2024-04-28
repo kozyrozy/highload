@@ -1,5 +1,6 @@
-package com.app.counter;
+package com.app.highload.tick.repository;
 
+import com.app.highload.tick.model.Tick;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

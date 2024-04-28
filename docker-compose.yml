@@ -1,7 +1,7 @@
 services:
   counter:
     #To start a multiple instances of this service, run command:
-    #'docker compose up --scale counter=N', N=number of instances
+    #'docker compose up --scale highload=N', N=number of instances
     #and then 'docker compose ps' to list the port mappings
     image: counter:latest
     build:
