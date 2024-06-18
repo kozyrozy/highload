@@ -26,7 +26,7 @@ public class RestServiceController {
 	@Autowired
 	private RedisPublisher messagePublisher;
 
-	@GetMapping("/")
+	@GetMapping("/v1/")
 	public double tickTack() {
 		if (tick == null) {
 			 tick = new Tick(96,0);
@@ -36,13 +36,13 @@ public class RestServiceController {
 		return repository.score(tick);
 	}
 
-	@PostMapping("/send")
+	@PostMapping("/v1/send")
 	public void postMessage(@RequestBody Message message) {
 		messagePublisher.publish(message.toString());
 
 	}
 
-	@GetMapping("/readAll")
+	@GetMapping("/v1/readAll")
 	public List<String> getMessages(){
 		return RedisSubscriber.messageList;
 	}
